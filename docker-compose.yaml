@@ -9,7 +9,7 @@ services:
       - redis
       - db
     environment:
-      - DATABASE_URL=postgresql://user:password@db/email_db
+      - DATABASE_URL=postgresql://tani:tani@db/email_db
       - REDIS_URL=redis://redis:6379/0
 
   redis:
@@ -20,8 +20,8 @@ services:
   db:
     image: postgres:13
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: tani
+      POSTGRES_PASSWORD: tani
       POSTGRES_DB: email_db
     ports:
       - "5432:5432"
@@ -33,5 +33,5 @@ services:
       - redis
       - db
     environment:
-      - DATABASE_URL=postgresql://user:password@db/email_db
+      - DATABASE_URL=postgresql://tani:tani@db/email_db
       - REDIS_URL=redis://redis:6379/0
